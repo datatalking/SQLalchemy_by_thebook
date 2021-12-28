@@ -3,7 +3,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy import Table, Column, Intger, String, Meta, ForeignKey
 
-# global setup
+# Global Setup
 SQLITE = 'sqlite'
 
-# 
+# Table Names
+USERS       = 'users'
+ADDRESSES   = 'addresses'
