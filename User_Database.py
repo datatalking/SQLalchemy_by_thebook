@@ -23,3 +23,34 @@ class MyDatabase:
 		# MICROSOFT_SQL_SERVER: 'mssql+pymssql://bob:ross@localhost:port/{DB}'
 
 	}
+	
+	
+	# Main Db Connection for referenced objects
+	db_engine = None
+	
+	
+	def __init__(self, dbtype, username = '', password = '', dbname = ''):
+		dbtype = dbtype.lower()
+		
+		if dbtype in self.DB_ENGINE.keys():
+			engine_url = self.DB_ENGINE[dbtype].format(DB = dbname)
+			
+			self.db_engine = create_engine(engine_url)
+			print(self.db_engine)
+		
+		#elif: create a "if these types are present log, alert security and flag ip with concurrent user account used
+		
+		else:
+			print("DBType is not found in allowed DB_ENGINE")
+		
+	
+	def create_db_tables(self):
+		metadata = MetaData():
+		users = Table(USERS, metadata,
+		              Column('id', Integer, primary_key = True),
+		              Column('first_name', String),
+		              Column('last_name', String),
+		              )
+		
+		addresses = Table(ADDRESSES, metadata,
+		                  Column('id', Integer, primary_key = True))
