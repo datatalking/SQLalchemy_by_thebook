@@ -1,7 +1,7 @@
 # SOURCE https://thinkdiff.net/how-to-use-python-sqlite3-using-sqlalchemy-158f9c54eb32
 
 from sqlalchemy import create_engine
-from sqlalchemy import Table, Column, Integer, String, Meta, ForeignKey
+from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
 
 
 # Global Setup
