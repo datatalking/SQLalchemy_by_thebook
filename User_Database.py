@@ -53,4 +53,8 @@ class MyDatabase:
 		              )
 		
 		addresses = Table(ADDRESSES, metadata,
-		                  Column('id', Integer, primary_key = True))
+		                  Column('id', Integer, primary_key = True),
+		                  Column('user_id', None, ForeignKey('user.id')),
+		                  Column('email', String, Nullable = False),
+		                  Column('address', String)
+		                  )
