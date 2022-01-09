@@ -3,6 +3,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy import Table, Column, Integer, String, Meta, ForeignKey
 
+
 # Global Setup
 SQLITE                  = 'sqlite'
 # MYSQL                 = 'mysql'  # TODO add tests that this isnt used
@@ -45,7 +46,7 @@ class MyDatabase:
 		
 	
 	def create_db_tables(self):
-		metadata = MetaData():
+		metadata = MetaData()
 		users = Table(USERS, metadata,
 		              Column('id', Integer, primary_key = True),
 		              Column('first_name', String),
