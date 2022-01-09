@@ -100,5 +100,13 @@ class MyDatabase:
 		def sample_delete(self):
 			# delete data by id
 			query = "DELETE FROM {} WHERE id = 3".format(USERS)
+			self.execute_query(query)
+			self.print_all_data(USERS)
+			
+			# delete all data
+			'''
+			query = "DELETE FROM {}".format(USERS)
+			
+			'''
 		
 			
