@@ -3,7 +3,7 @@
 
 from database import mydatabase
 
-def main()
+def main():
 	dbms = mydatabase.MyDatabase(mydatabase.SQLITE, dbname = 'mydb.sqlite') # TODO .format for SQLITE f string
 	
 	# create Tables
