@@ -117,3 +117,12 @@ class MyDatabase:
 				"VALUES (3, 'Terrence', 'Jordan');".format(USERS)
 			self.execute_query(query)
 			self.print_all_data(USERS)
+		
+		
+		def sample_update(self):
+			# update data
+			query = "UPDATE {} set first_name='XXXX' WHERE id = {id} " \
+				.format(USERS, id = 3)
+			self.execute_query(query)
+			self.print_all_data(USERS)
+			
