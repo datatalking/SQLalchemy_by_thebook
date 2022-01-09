@@ -106,7 +106,10 @@ class MyDatabase:
 			# delete all data
 			'''
 			query = "DELETE FROM {}".format(USERS)
-			
+			self.execute_query(query)
+			self.print_all_data(USERS)
 			'''
+		
+		
 		
 			
