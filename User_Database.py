@@ -95,5 +95,8 @@ class MyDatabase:
 			        "WHERE u.id = a.user_id AND u.last_name LIKE 'M%'; " \
 				.format(TBL_USR = USERS, TBL_ADDR = ADDRESSES)
 			self.print_all_data(query = query)
-			
+		
+		
+		def sample_delete(self):
+		
 			
