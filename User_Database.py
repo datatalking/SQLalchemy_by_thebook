@@ -58,3 +58,23 @@ class MyDatabase:
 		                  Column('email', String, Nullable = False),
 		                  Column('address', String)
 		                  )
+		
+		try:
+			metadata.create_all(self.db_engine)
+			print("Tables created") # TODO add customizable "table name" was added
+		
+		except Exception as e:
+			print("Error occured during Table creation")
+			print(e)
+		
+		
+		# insert, update, delete
+		def execute_query(self, query = ''):
+			if query == '' : return
+			
+			print(query)
+			with self.db_engine.connect() as connection:
+				try:
+					connection.execute(query)
+				except Exception as e:
+					print(e)
