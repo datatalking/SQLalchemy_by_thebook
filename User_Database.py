@@ -98,5 +98,7 @@ class MyDatabase:
 		
 		
 		def sample_delete(self):
+			# delete data by id
+			query = "DELETE FROM {} WHERE id = 3".format(USERS)
 		
 			
