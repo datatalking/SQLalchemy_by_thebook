@@ -111,5 +111,9 @@ class MyDatabase:
 			'''
 		
 		
-		
-			
+		def sample_insert(self):
+			# insert data
+			query = "INSERT INTO {}(id, first_name, last_name) " \
+				"VALUES (3, 'Terrence', 'Jordan');".format(USERS)
+			self.execute_query(query)
+			self.print_all_data(USERS)
