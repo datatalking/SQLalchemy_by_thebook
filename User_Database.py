@@ -93,3 +93,7 @@ class MyDatabase:
 			        "FROM {TBL_USR} AS u " \
 			        "LEFT JOIN {TBL_ADDR} as a " \
 			        "WHERE u.id = a.user_id AND u.last_name LIKE 'M%'; " \
+				.format(TBL_USR = USERS, TBL_ADDR = ADDRESSES)
+			self.print_all_data(query = query)
+			
+			
